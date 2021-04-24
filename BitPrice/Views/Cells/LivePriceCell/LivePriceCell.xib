@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="LivePriceCell" rowHeight="150" id="O8e-Fj-L7U" customClass="LivePriceCell" customModule="BitPrice" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O8e-Fj-L7U" id="QPq-ZR-33n">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgGrayCell" translatesAutoresizingMaskIntoConstraints="NO" id="e77-0a-pCh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwj-8l-82p">
+                        <rect key="frame" x="0.0" y="43" width="414" height="31"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <size key="shadowOffset" width="1" height="2"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="$ 9,887.456" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKk-No-hAq">
+                        <rect key="frame" x="0.0" y="79" width="414" height="38"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                        <color key="textColor" red="0.58991851829142772" green="0.79922770380235986" blue="0.4965869495467905" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <size key="shadowOffset" width="1" height="2"/>
+                    </label>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="BTm-5Q-x5D">
+                        <rect key="frame" x="0.0" y="79" width="414" height="38"/>
+                    </activityIndicatorView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gKk-No-hAq" firstAttribute="top" secondItem="nwj-8l-82p" secondAttribute="bottom" constant="5" id="NZW-lu-5MF"/>
+                    <constraint firstItem="BTm-5Q-x5D" firstAttribute="top" secondItem="gKk-No-hAq" secondAttribute="top" id="e6d-gs-0iw"/>
+                    <constraint firstItem="BTm-5Q-x5D" firstAttribute="trailing" secondItem="gKk-No-hAq" secondAttribute="trailing" id="g6f-BF-zBy"/>
+                    <constraint firstItem="BTm-5Q-x5D" firstAttribute="leading" secondItem="gKk-No-hAq" secondAttribute="leading" id="gjD-6k-x2v"/>
+                    <constraint firstItem="BTm-5Q-x5D" firstAttribute="bottom" secondItem="gKk-No-hAq" secondAttribute="bottom" id="ob0-6W-7HW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="e77-0a-pCh" secondAttribute="trailing" id="Cmc-kr-Wa9"/>
+                <constraint firstAttribute="bottom" secondItem="e77-0a-pCh" secondAttribute="bottom" id="Fbk-C6-z00"/>
+                <constraint firstAttribute="trailing" secondItem="nwj-8l-82p" secondAttribute="trailing" id="JaK-6k-kCl"/>
+                <constraint firstItem="nwj-8l-82p" firstAttribute="top" secondItem="O8e-Fj-L7U" secondAttribute="top" constant="43" id="SJF-jh-Nie"/>
+                <constraint firstItem="nwj-8l-82p" firstAttribute="leading" secondItem="O8e-Fj-L7U" secondAttribute="leading" id="SU0-vw-7Xu"/>
+                <constraint firstItem="gKk-No-hAq" firstAttribute="leading" secondItem="O8e-Fj-L7U" secondAttribute="leading" id="cZD-Gh-C6i"/>
+                <constraint firstItem="e77-0a-pCh" firstAttribute="top" secondItem="O8e-Fj-L7U" secondAttribute="top" id="giL-0Z-xCm"/>
+                <constraint firstAttribute="trailing" secondItem="gKk-No-hAq" secondAttribute="trailing" id="hbZ-5J-Mja"/>
+                <constraint firstItem="e77-0a-pCh" firstAttribute="leading" secondItem="O8e-Fj-L7U" secondAttribute="leading" id="uMG-PK-4Bo"/>
+            </constraints>
+            <connections>
+                <outlet property="loadingIdicator" destination="BTm-5Q-x5D" id="gZw-cN-dXx"/>
+                <outlet property="priceLabel" destination="gKk-No-hAq" id="kc8-wr-GBj"/>
+            </connections>
+            <point key="canvasLocation" x="-197.10144927536234" y="-89.0625"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bgGrayCell" width="640" height="266"/>
+    </resources>
+</document>
